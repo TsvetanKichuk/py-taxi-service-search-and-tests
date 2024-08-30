@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from taxi.forms import DriverLicenseUpdateForm
+from taxi.forms import DriverLicenseUpdateForm, DriverCreationForm
 
 
 class FormsTests(TestCase):
@@ -11,8 +11,8 @@ class FormsTests(TestCase):
             "password2": "user12test",
             "first_name": "Test first",
             "last_name": "Test last",
-            "pseudonym": "Pest Pseudonym",
+            "license_number": "Test licence",
         }
-        form = DriverLicenseUpdateForm(data=form_data)
+        form = DriverCreationForm(data=form_data)
         self.assertTrue(form.is_valid())
         self.assertEqual(form.cleaned_data, form_data)
