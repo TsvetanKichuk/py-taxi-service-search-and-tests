@@ -29,7 +29,8 @@ class AdminSiteTests(TestCase):
 
     def test_fieldsets(self):
         """
-                test that driver's additional info is in list_display on admin page
+                test that driver's additional info
+                is in list_display on admin page
                 :return:
                 """
         url = reverse("admin:taxi_driver_change", args=[self.driver.id])
@@ -38,7 +39,8 @@ class AdminSiteTests(TestCase):
 
     def test_add_fieldsets(self):
         """
-                test that driver's additional info is added in list_display on admin page
+                test that driver's additional info
+                is added in list_display on admin page
                 :return:
                 """
         url = reverse("admin:taxi_driver_add")
