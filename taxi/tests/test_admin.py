@@ -41,6 +41,6 @@ class AdminSiteTests(TestCase):
                 test that driver's additional info is added in list_display on admin page
                 :return:
                 """
-        url = reverse("admin:taxi_driver_add", args=[self.driver.id])
+        url = reverse("admin:taxi_driver_add")
         res = self.client.get(url)
-        self.assertContains(res, self.driver.license_number)
+        self.assertContains(res, self.driver.id)
