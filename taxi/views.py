@@ -12,7 +12,7 @@ from taxi.forms import (
     CarForm,
     DriverSearchForm,
     CarSearchForm,
-    ManufacturerSearchForm
+    ManufacturerSearchForm,
 )
 
 
